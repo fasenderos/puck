@@ -82,6 +82,7 @@ exports[`Puck should generate the correct state on mount 1`] = `
               "focus": null,
             },
             "isDragging": false,
+            "itemExpanded": {},
             "itemSelector": null,
             "leftSideBarVisible": true,
             "plugin": {
@@ -144,6 +145,7 @@ exports[`Puck should generate the correct state on mount 1`] = `
           "focus": null,
         },
         "isDragging": false,
+        "itemExpanded": {},
         "itemSelector": null,
         "leftSideBarVisible": true,
         "plugin": {
@@ -249,6 +251,7 @@ exports[`Puck should generate the correct state on mount 1`] = `
         "focus": null,
       },
       "isDragging": false,
+      "itemExpanded": {},
       "itemSelector": null,
       "leftSideBarVisible": false,
       "plugin": {
