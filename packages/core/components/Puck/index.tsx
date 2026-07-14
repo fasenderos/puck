@@ -16,6 +16,7 @@ import {
 
 import type {
   UiState,
+  DndConfig,
   IframeConfig,
   OnAction,
   Overrides,
@@ -83,9 +84,7 @@ type PuckProps<
   headerPath?: string;
   viewports?: Viewports;
   iframe?: IframeConfig;
-  dnd?: {
-    disableAutoScroll?: boolean;
-  };
+  dnd?: DndConfig;
   initialHistory?: InitialHistory;
   metadata?: Metadata;
   height?: CSSProperties["height"];
@@ -122,6 +121,7 @@ function PuckProvider<
     overrides,
     viewports = defaultViewports,
     iframe: _iframe,
+    dnd,
     initialHistory: _initialHistory,
     metadata,
     onAction,
@@ -266,6 +266,7 @@ function PuckProvider<
         _experimentalVirtualization: !!_experimentalVirtualization,
         onAction,
         metadata,
+        dnd,
         fieldTransforms: loadedFieldTransforms,
       };
     },
@@ -281,6 +282,7 @@ function PuckProvider<
       _experimentalVirtualization,
       onAction,
       metadata,
+      dnd,
       loadedFieldTransforms,
     ]
   );

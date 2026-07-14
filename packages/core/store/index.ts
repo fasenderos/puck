@@ -2,6 +2,7 @@
 
 import {
   Config,
+  DndConfig,
   IframeConfig,
   Overrides,
   AppState,
@@ -88,6 +89,7 @@ export type AppStore<
   getComponentConfig: (type?: string) => ComponentConfig | null | undefined;
   onAction?: (action: PuckAction, newState: AppState, state: AppState) => void;
   metadata: Metadata;
+  dnd?: DndConfig;
   fields: FieldsSlice;
   history: HistorySlice;
   nodes: NodesSlice;
@@ -128,6 +130,7 @@ export const createAppStore = (initialAppStore?: Partial<AppStore>) =>
       _experimentalFullScreenCanvas: false,
       _experimentalVirtualization: false,
       metadata: {},
+      dnd: {},
       fieldTransforms: {},
       ...initialAppStore,
       fields: createFieldsSlice(set, get),
